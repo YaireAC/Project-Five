@@ -2,7 +2,7 @@ import tkinter as tk
 import random
 
 
-class SearchApp:
+class Search:
     def __init__(self, root):
         self.root = root
         self.root.title("Search Visualization")
@@ -43,7 +43,7 @@ class SearchApp:
         if self.search_index < len(self.data):
             candidate_value = self.data[self.search_index]
             self.draw_bars(self.search_index)
-            self.root.after(100, self.search, target_value)  # Shorten the delay to 100 milliseconds
+            self.root.after(100, self.search, target_value)  
             self.search_index += 1
 
             if candidate_value == target_value:
@@ -55,7 +55,7 @@ class SearchApp:
 
 if __name__ == "__main__":
     root = tk.Tk()
-    app = SearchApp(root)
+    app = Search(root)
     root.mainloop()
 
 # Section 2
